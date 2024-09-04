@@ -33,7 +33,7 @@ class GameController extends Controller
 
     public function update(Request $request, $id) {
         $game = $this->service->updateGame($id, $request->all());
-        return $game ? response()->json($game) : responce()->json(['message' => 'Not Found'], 404);
+        return $game ? response()->json($game) : response()->json(['message' => 'Not Found'], 404);
     }
 
     public function destroy($id)
